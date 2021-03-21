@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.HrMapper">
+    <insert id="insert"></insert>
+    <insert id="insertSelective"></insert>
+    <update id="updateByPrimaryKeySelective"></update>
+    <update id="updateByPrimaryKey"></update>
+    <select id="loadUserByUsername" resultType="com.example.demo.po.Hr" parameterType="String">
+        select * from hr where username = #{value}
+    </select>
+    <delete id="deleteByPrimaryKey"></delete>
+    <select id="selectByPrimaryKey" resultType="com.example.demo.po.Hr"></select>
+</mapper>
