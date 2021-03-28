@@ -25,6 +25,8 @@ public class HrService implements UserDetailsService {
       if(hr==null){
           throw new UsernameNotFoundException("用户名不存在");
       }
+      //登录成功之后，给用户设置角色
+        hr.setRoles(hrMapper.getHrRoleById(hr.getId()));
       return hr;
     }
 }

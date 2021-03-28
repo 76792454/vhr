@@ -12,4 +12,7 @@
     </select>
     <delete id="deleteByPrimaryKey"></delete>
     <select id="selectByPrimaryKey" resultType="com.example.demo.po.Hr"></select>
+    <select id="getHrRoleById" resultType="com.example.demo.po.Role">
+            select r.* from role r,hr_role hrr where hrr.rid=r.id and hrid=#{id}
+    </select>
 </mapper>
